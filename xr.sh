@@ -99,5 +99,3 @@ echo "Xray УСТАНОВЛЕН И ЗАПУЩЕН"
 echo "Inbound : Shadowsocks 443 TCP/UDP"
 echo "Outbound: 1xeammnp"
 echo "======================================"
-
-нужно убрать outbound
