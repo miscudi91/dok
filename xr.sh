@@ -43,7 +43,6 @@ cat > "$XRAY_CONFIG_FILE" << 'EOF'
     }
   ],
   "outbounds": [
-  
     {
       "protocol": "freedom",
       "tag": "direct"
@@ -52,15 +51,14 @@ cat > "$XRAY_CONFIG_FILE" << 'EOF'
   "routing": {
     "domainStrategy": "AsIs",
     "rules": [
-      
       {
-      "tag": "DIRECT",
-      "protocol": "freedom"
-    },
-    {
-      "tag": "BLOCK",
-      "protocol": "blackhole"
-    }
+        "type": "field",
+        "network": "tcp,udp",
+        "inboundTag": [
+          "inbound-443"
+        ],
+        "outboundTag": "direct"
+      }
     ]
   }
 }
