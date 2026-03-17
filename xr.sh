@@ -44,6 +44,30 @@ cat > "$XRAY_CONFIG_FILE" << 'EOF'
   ],
   "outbounds": [
     {
+      "protocol": "shadowsocks",
+      "tag": "1xeammnp",
+      "settings": {
+        "servers": [
+          {
+            "address": "91.84.100.81",
+            "port": 5555,
+            "password": "zl18dzqoCTQ3OCrLxylVplGaTMzm7kUM+t2ZEwbOw5s=:ejwgFBs+u/JnuPLG3C51OQ9ZlBLLvh4AyG7YdQJTNZE=",
+            "method": "2022-blake3-aes-256-gcm",
+            "uot": true
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
       "protocol": "freedom",
       "tag": "direct"
     }
@@ -57,7 +81,7 @@ cat > "$XRAY_CONFIG_FILE" << 'EOF'
         "inboundTag": [
           "inbound-443"
         ],
-        "outboundTag": "direct"
+        "outboundTag": "1xeammnp"
       }
     ]
   }
