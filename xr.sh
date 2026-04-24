@@ -33,7 +33,7 @@ cat > "$XRAY_CONFIG_FILE" << 'EOF'
     {
       "tag": "inbound-443",
       "listen": "0.0.0.0",
-      "port": 443,
+      "port": 8443,
       "protocol": "shadowsocks",
       "settings": {
         "method": "chacha20-ietf-poly1305",
